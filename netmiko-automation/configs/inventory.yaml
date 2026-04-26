@@ -1,0 +1,43 @@
+# Device inventory — mirrors the GNS3 BGP lab topology
+# Update 'host' to match your GNS3 cloud/tap interface IPs
+
+devices:
+  - name: R1-AS100-RR
+    host: 192.168.122.101      # GNS3 management IP
+    device_type: cisco_ios
+    username: admin
+    password: cisco
+    secret: cisco
+    groups: [as100, route-reflector]
+
+  - name: R2-AS100-ASBR1
+    host: 192.168.122.102
+    device_type: cisco_ios
+    username: admin
+    password: cisco
+    secret: cisco
+    groups: [as100, asbr]
+
+  - name: R3-AS100-ASBR2
+    host: 192.168.122.103
+    device_type: cisco_ios
+    username: admin
+    password: cisco
+    secret: cisco
+    groups: [as100, asbr]
+
+  - name: R4-AS200-Customer
+    host: 192.168.122.104
+    device_type: cisco_ios
+    username: admin
+    password: cisco
+    secret: cisco
+    groups: [as200]
+
+  - name: R5-AS300-PeerISP
+    host: 192.168.122.105
+    device_type: cisco_ios
+    username: admin
+    password: cisco
+    secret: cisco
+    groups: [as300]
